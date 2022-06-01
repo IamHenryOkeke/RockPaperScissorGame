@@ -1,0 +1,1 @@
+// this is a script for rock paper scissors game
