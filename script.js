@@ -79,6 +79,9 @@ function game(){
      if (playerScore > computerScore){
          winnerMessage = "After 5 rounds, You win";
      }
+     else if (playerScore == computerScore){
+         winnerMessage = "After 5 rounds, it was a draw"
+     }
      else{
          winnerMessage = "After 5 rounds, You lose"
      }
