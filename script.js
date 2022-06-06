@@ -25,28 +25,16 @@ function playRound(computerSelection, playerSelection){
         message = `It's a draw. You both chose ${playerSelection}`;
         
     }
-    else if (computerSelection === "rock" && playerSelection === "paper"){
+    else if (computerSelection === "rock" && playerSelection === "paper" || 
+        computerSelection === "paper" && playerSelection === "scissors" || 
+        computerSelection === "scissors" && playerSelection === "rock"){
         message = `The computer chose ${computerSelection} \nYou win. ${playerSelection} covers ${computerSelection}.`;
         
     }
-    else if (computerSelection === "rock" && playerSelection === "scissors"){
+    else if (computerSelection === "rock" && playerSelection === "scissors" || 
+        computerSelection === "paper" && playerSelection === "rock" ||
+        computerSelection === "scissors" && playerSelection === "paper"){
         message = `The computer chose ${computerSelection} \nYou lose. ${computerSelection} crushes ${playerSelection}.`;   
-    }
-    else if (computerSelection === "paper" && playerSelection === "rock"){
-        message = `The computer chose ${computerSelection} \nYou lose. ${computerSelection} covers ${playerSelection}.`;
-        
-    }
-    else if (computerSelection === "paper" && playerSelection === "scissors"){
-        message = `The computer chose ${computerSelection} \nYou win. ${playerSelection} cuts ${computerSelection}.`;
-        
-    }
-    else if (computerSelection === "scissors" && playerSelection === "paper"){
-        message = `The computer chose ${computerSelection} \nYou lose. ${computerSelection} cuts ${playerSelection}.`;
-        
-    }
-    else if (computerSelection === "scissors" && playerSelection === "rock"){
-        message = `The computer chose ${computerSelection} \nYou win. ${playerSelection} crushes ${computerSelection}.`;
-        
     }
     else{
         console.log("Wrong entry. Enter from the options provided");
