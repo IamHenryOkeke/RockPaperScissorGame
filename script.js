@@ -18,7 +18,6 @@ const result = document.createElement("div")
 
 const resultPlay = document.createElement("div")
 
-const buttons = document.querySelectorAll("button")
 
 
 
@@ -27,7 +26,7 @@ head.textContent = "Rock Paper Scissors Game"
 container.appendChild(head);
 
 para.classList.add('para');
-para.textContent = 'Pick your selection below via the button to play against the computer.\n' + 'The first to get to five wins. Goodluck to you!'
+para.textContent = 'Pick your selection below via the button to play against the computer.'
 container.appendChild(para);
 
 btnRock.classList.add('buttonRock');
