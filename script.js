@@ -66,7 +66,7 @@ function playRound(playerSelection){
         mainContainer.appendChild(result);
         score.textContent = (`Score: Player ${playerScore} - ${computerScore} Computer`);
         if (playerScore === 5) {
-            result.innerText = 'You got to five first.You won the game! &#129327. Reload the page to play again'
+            result.innerHTML = 'You got to five first.You won the game! &#129327. Reload the page to play again'
             stopPlay();
             newGameBtn.style.display = 'inline-block';
         } 
@@ -78,7 +78,7 @@ function playRound(playerSelection){
         mainContainer.appendChild(result);
         score.textContent = (`Score: Player ${playerScore} - ${computerScore} Computer`);
         if (computerScore === 5) {
-            result.innerText = 'The Computer got to five first.You lose! &#128541. Reload the page to play again'
+            result.innerHTML = 'The Computer got to five first.You lose! &#128541. Reload the page to play again'
             stopPlay();
             newGameBtn.style.display = 'inline-block';
         } 
