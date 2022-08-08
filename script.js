@@ -18,7 +18,7 @@ const buttons = document.querySelectorAll('button');
 
 const newGameBtn = document.getElementById('restart-game')
 
-body.setAttribute("style", "background-color: grey;max-width: 500px;margin: auto; color:white;");
+html.setAttribute("style", "background-color: grey;max-width: 500px;margin: auto; color:white;");
 
 head.classList.add('head');
 head.textContent = "Rock Paper Scissors Game"
