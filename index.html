@@ -10,13 +10,14 @@
 <body>
     <div class="main-container">    
         <div class="container"></div>
-        
-        <button id="rock" value="rock" style="margin-right: 10px; padding: 8px 15px;background-color: red; border-radius: 10px;">Rock</button>
-        <button id="paper" value="paper" style="margin-right: 10px; padding: 8px 15px;background-color: yellow; border-radius: 10px;">Paper</button>
-        <button id="scissors" value="scissors" style="margin-right: 10px; padding: 8px 15px;background-color: green;border-radius: 10px;">Scissors</button>
-
+        <button id="rock" class=".buttons" value="rock" style="margin-right: 10px; padding: 8px 15px;background-color: red; border-radius: 10px; cursor: pointer;">Rock</button>
+        <button id="paper" class=".buttons" value="paper" style="margin-right: 10px; padding: 8px 15px;background-color: yellow; border-radius: 10px;cursor: pointer;">Paper</button>
+        <button id="scissors" class=".buttons" value="scissors" style="margin-right: 10px; padding: 8px 15px;background-color: green;border-radius: 10px;cursor: pointer;">Scissors</button>
         <div id="result"></div>
         <div id="score"></div>
+    </div>
+    <div class="restart-container">
+        <div id="restart-game" style="margin-right: 10px; padding: 8px 15px;background-color: rgb(26, 24, 24); border-radius: 10px; display: none; cursor: pointer;">Restart game</div>
     </div>
 
     <script src="./script.js"></script>

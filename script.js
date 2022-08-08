@@ -16,6 +16,8 @@ const score = document.getElementById("score");
 
 const buttons = document.querySelectorAll('button');
 
+const newGameBtn = document.getElementById('restart-game')
+
 body.setAttribute("style", "background-color: grey;max-width: 500px;margin: auto; color:white;");
 
 head.classList.add('head');
@@ -30,16 +32,16 @@ para2.classList.add('para2');
 para2.innerHTML = 'Dear Nigerian Student, Get to five first to beat the computer. The fate of ASUU strike is in your hands. Just kidding &#129315	'
 container.appendChild(para2);
 
-
 let playerSelection;
 let computerScore = 0;
 let playerScore = 0;
+
 function computerPlay(){
     let myArray = ["rock", "paper", "scissors"];
     let number = Math.floor((Math.random() * myArray.length));
-    // generates an integer between 1 and 3
     return myArray[number];
 }
+
 function stopPlay() {
     buttons.forEach(btn => {
         btn.disabled = true
@@ -64,8 +66,9 @@ function playRound(playerSelection){
         mainContainer.appendChild(result);
         score.textContent = (`Score: Player ${playerScore} - ${computerScore} Computer`);
         if (playerScore === 5) {
-            result.innerHTML = 'You got to five first.You won the game! &#129327. Reload the page to play again'
+            result.innerText = 'You got to five first.You won the game! &#129327. Reload the page to play again'
             stopPlay();
+            newGameBtn.style.display = 'inline-block';
         } 
     }
     else{
@@ -75,16 +78,27 @@ function playRound(playerSelection){
         mainContainer.appendChild(result);
         score.textContent = (`Score: Player ${playerScore} - ${computerScore} Computer`);
         if (computerScore === 5) {
-            result.innerHTML = 'The Computer got to five first.You lose! &#128541. Reload the page to play again'
+            result.innerText = 'The Computer got to five first.You lose! &#128541. Reload the page to play again'
             stopPlay();
+            newGameBtn.style.display = 'inline-block';
         } 
     }
 }
 
 buttons.forEach(button => {
-    // and for each one we add a 'click' listener
     button.addEventListener('click', () => {
         playerSelection = button.value;
         playRound(playerSelection);
     });
 });
+
+newGameBtn.addEventListener("click", () => {
+    computerScore = 0;
+    playerScore = 0;
+    score.textContent = ''
+    result.textContent = ''
+    buttons.forEach(btn => {
+        btn.disabled = false
+    })
+    newGameBtn.style.display = 'none'
+})
